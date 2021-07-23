@@ -97,3 +97,16 @@ button:hover {
     transition: 1s all;
     transform: scale(1.1);
 }
+
+p {
+    color: #EBEBEB;
+}
+
+p a {
+    color: #EBEBEB;
+    text-decoration: none;
+}
+
+p a:hover{
+    font-style: italic;
+}
