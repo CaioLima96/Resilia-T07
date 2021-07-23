@@ -98,15 +98,15 @@ button:hover {
     transform: scale(1.1);
 }
 
-p {
+#credits {
     color: #EBEBEB;
 }
 
-p a {
+#credits a {
     color: #EBEBEB;
     text-decoration: none;
 }
 
-p a:hover{
+#credits a:hover{
     font-style: italic;
 }
