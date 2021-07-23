@@ -20,55 +20,62 @@
 
     <body>
 
-        <section id="form-section">
+        <div id="form-section">
+            <h1>Inscrições Abertas !!!</h1>
 
             <form action="">
 
-                <h1>Inscrições Abertas !!!</h1>
-    
-                <div id="input-fields">
-    
-                    <div id="input-field">
-                        <label for="full-name">Nome Completo</label>
-                        <input type="text" id="full-name" name="full-name" placeholder="Nome">
-                    </div>
-                    
-                    <div id="input-field">
-                        <label for="email">E-mail (você usará o mesmo durante todo o processo seletivo)</label>
-                        <input type="text" id="email" name="email" placeholder="Email">
-                    </div>
-    
-                    <div id="input-field">
-                        <label for="celular">Celular</label>
-                        <input type="text" id="celular" name="celular" placeholder="Celular">
-                    </div>
-    
-                    <div id="input-field">
-                        <label for="objetivo">Obejtivo</label>
-                        <select name="objetivo" id="objetivo">
-                            <option value="0">Selecione um objetivo</option>
-                            <option value="1">Arrumar um emprego</option>
-                            <option value="2">Aprender programação</option>
-                            <option value="3">Mudar de carreira</option>
-                            <option value="4">Ter um bom salário</option>
-                            <option value="5">Outro</option>
-                        </select>
-                    </div>
-    
-                    <div id="input-field">
-                        <label for="politica-privacidade">Você concorda com a nossa <strong>Política de Privacidade?</strong></label>
-                        <input type="radio" id="politica-privacidade" name="politica-privacidade">
-                    </div>
-    
-                    <div id="input-field">
-                        <input type="submit">
-                    </div>
-    
+                <div id="input-field">
+                    <label for="full-name">Nome Completo</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Nome" required>
+                </div>
+                
+                <div id="input-field">
+                    <label for="email">E-mail (você usará o mesmo durante todo o processo seletivo)</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div id="input-field">
+                    <label for="celular">Celular</label>
+                    <input type="text" id="celular" name="celular" placeholder="Celular" required>
+                </div>
+
+                <div id="input-field">
+                    <label for="objetivo">Qual o seu obejtivo?</label>
+                    <select name="objetivo" id="objetivo" required>
+                        <option selected disabled value="">Selecione um objetivo</option>
+                        <option>Arrumar um emprego</option>
+                        <option>Aprender programação</option>
+                        <option>Mudar de carreira</option>
+                        <option>Ter um bom salário</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+
+                <div id="input-field">
+                    <label for="objetivo">Como você conheceu a Resilia?</label>
+                    <select name="objetivo" id="objetivo" required>
+                        <option selected disabled value="">---</option>
+                        <option>Facebook</option>
+                        <option>Instagram</option>
+                        <option>Linkedin</option>
+                        <option>Jornal</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+
+                <div id="input-field">
+                    <label for="politica-privacidade">Você concorda com a nossa <strong>Política de Privacidade?</strong></label>
+                    <input type="radio" id="politica-privacidade" name="politica-privacidade" required>
+                </div>
+
+                <div align = center>
+                    <button type="submit">Inscrever-se</button>
                 </div>
     
+    
             </form>
-
-        </section>
+        </div>
 
     </body>
 
