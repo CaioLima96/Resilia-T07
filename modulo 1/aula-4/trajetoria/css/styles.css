@@ -9,6 +9,8 @@
 
 body {
     background-color: rgb(234 234 234);
+    background-image: url(../img/toy-bg-01.jpg);
+    background-size: 85%;
 }
 
 main {
@@ -17,7 +19,7 @@ main {
     max-width: 575px;
     width: 80%;
     margin: 1.25rem auto 0 auto;
-    border-radius: 4px;
+    border-radius: 0.313rem;
 }
 
 
@@ -31,7 +33,9 @@ main header {
     background-color: #87C15E;
 
     height: 50px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    border-top-left-radius: 0.313rem;
+    border-top-right-radius: 0.313rem;
 }
 
 main header h1 {
@@ -59,31 +63,45 @@ main #part-1 {
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
-    text-align: center;
 }
 
-main #part-1 p {
+main #part-1 p:not(p:last-child) {
     font-size: 0.938rem;
+    margin-bottom: 1rem;
 }
 
 main #part-1 div {
     position: relative;
+    width: 86%;
+    margin: 0 auto;
 }
 
 main #part-1 div div {
     position: absolute;
     top: 0;
-    background-color: black;
+    background-color: #00000059;
     color: white;
     /* width: 38%; */
     width: 60px;
     border-bottom-right-radius: 37px;
+    padding: 0.188rem;
 
+}
+
+main #part-1 div div a {
+    text-decoration: none;
 }
 
 main #part-1 div div p {
     font-size: 0.875rem;
     margin-left: -0.625rem;
+    margin-bottom: 0 ;
+    text-align: center ;
+    color: #ffffff52 ;
+}
+
+main #part-1 div div p:hover {
+    color: white;
 }
 
 main #part-2 {
