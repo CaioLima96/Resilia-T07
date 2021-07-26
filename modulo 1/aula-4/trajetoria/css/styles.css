@@ -18,8 +18,9 @@ main {
     background-color: white;
     max-width: 575px;
     width: 80%;
-    margin: 1.25rem auto 0 auto;
+    margin: 1.25rem auto;
     border-radius: 0.313rem;
+    padding-bottom: 1.25rem;
 }
 
 
@@ -36,6 +37,11 @@ main header {
     margin-bottom: 1.25rem;
     border-top-left-radius: 0.313rem;
     border-top-right-radius: 0.313rem;
+}
+
+main header a {
+    text-decoration: none;
+    color: black;
 }
 
 main header h1 {
@@ -105,10 +111,54 @@ main #part-1 div div p:hover {
 }
 
 main #part-2 {
-    display: flex;
-    justify-content: center;
+    width: 86%;
+    max-width: 430px;
+    margin: 1.75rem auto 0;
 }
 
-ul {
-    color: rgb(230, 63, 90);
+main #part-2 div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}    
+
+main #part-2 div:nth-child(1) h3 {
+    margin: 0 0.313rem;
+    font-size: 1.25rem;
+}
+
+main #part-2 div:nth-child(1) div {
+    width: 20px;
+    height: 0.313rem;
+    flex-grow: 1;
+    background-color: #87C15E;
+}
+
+main #part-2 div:nth-child(1) div:nth-child(1) {
+    border-top-left-radius: 0.313rem;
+    border-bottom-left-radius: 0.313rem;
+}
+
+main #part-2 div:nth-child(1) div:last-child {
+    border-top-right-radius: 0.313rem;
+    border-bottom-right-radius: 0.313rem;
+}
+
+main #part-2 div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+main #part-2 div:nth-child(2) ul {
+    list-style: none;
+}
+
+main #part-2 div:nth-child(2) ul h4 {
+    text-align: center;
+}
+
+main #part-2 div:nth-child(2) ul li {
+    font-size: 0.875rem;
+    line-height: 1.938rem;
 }
