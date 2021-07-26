@@ -11,44 +11,82 @@ body {
     background-color: rgb(234 234 234);
 }
 
-/*====== MAIN ======*/
-
 main {
-    background-color: #bfa169;
+    /* background-color: #bfa169; */
+    background-color: white;
     max-width: 575px;
     width: 80%;
     margin: 1.25rem auto 0 auto;
     border-radius: 4px;
-    border: 1px solid red;
 }
 
-main div:nth-child(1) {
+
+
+/*====== HEADER ======*/
+
+main header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #87C15E;
+
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+main header h1 {
+    font-size: 1.875rem;
+    margin-left: 1rem;
+}
+
+main header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    width: 38%;
+    max-width: 218px;
+    margin-right: 1rem;
+}
+
+
+
+
+/*====== MAIN ======*/
+
+main #part-1 {
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
 
-main h1 {
-    font-size: 2.5rem;
-    margin: 0.313rem 0;
+main #part-1 p {
+    font-size: 0.938rem;
 }
 
-main h3, p {
-    margin: 0.313rem 0;
-}
-
-main div div {
+main #part-1 div {
     position: relative;
 }
 
-main div div div {
+main #part-1 div div {
     position: absolute;
     top: 0;
-    left: 0.313rem;
+    background-color: black;
+    color: white;
+    /* width: 38%; */
+    width: 60px;
+    border-bottom-right-radius: 37px;
+
 }
 
-main #materias {
+main #part-1 div div p {
+    font-size: 0.875rem;
+    margin-left: -0.625rem;
+}
+
+main #part-2 {
     display: flex;
     justify-content: center;
 }
