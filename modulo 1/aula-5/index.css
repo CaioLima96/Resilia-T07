@@ -1,0 +1,20 @@
+#pai {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 0 auto;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.filho:nth-child(1), .filho:nth-child(4) {
+    background-color: black;
+    color: white;
+}
+
+.filho:nth-child(2), .filho:nth-child(3) {
+    background-color: yellow;
+}
