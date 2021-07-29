@@ -23,7 +23,7 @@ body {
     padding-top: 1rem;
 }
 
-main div:nth-child(1) {
+main div:not(div:last-child) {
     margin-bottom: 1.25rem;
 }
 
