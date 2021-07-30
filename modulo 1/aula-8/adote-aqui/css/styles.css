@@ -56,6 +56,54 @@ header nav a {
 
 /*============== MAIN ==============*/
 
+#dog-collar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* height: 40px; */
+    height: 120px;
+    max-width: 1140px;
+    margin: 3.125rem auto 0;
+}
+
+#dog-collar div:not(#name-tag) {
+    background-color: #2b88a5;
+    width: 100px;
+    height: 10px;
+    flex-grow: 1;
+}
+
+#dog-collar div:nth-child(1) {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+
+#dog-collar div:last-child {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px
+}
+
+#dog-collar #name-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 166px;
+    margin: 0 0.625rem;
+}
+
+#dog-collar #name-tag p {
+    position: absolute;
+    font-size: 1.75rem;
+    color: black;
+}
+
+#dog-collar #name-tag img {
+    width: 100%;
+}
+
 #part-1 ul {
     display: flex;
     flex-wrap: wrap;
@@ -114,6 +162,10 @@ header nav a {
 
 
     /*============== MAIN ==============*/
+    
+    #dog-collar {
+        width: 90% !important;
+    }
 
     #part-1 ul {
         width: 80% !important;

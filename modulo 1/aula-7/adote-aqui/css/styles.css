@@ -62,10 +62,14 @@ header nav a {
     list-style: none;
     width: 67.5%;
     max-width: 1140px;
-    margin: 1.25rem auto;
+    margin: 3.125rem auto;
     padding: 1%;
     background-color: #a586864d;
     border-radius: 0.313rem;
+}
+
+#part-1 ul:nth-child(2) {
+    justify-content: center;
 }
 
 #part-1 ul li {
