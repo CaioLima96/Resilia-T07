@@ -87,37 +87,6 @@ header nav a {
     object-fit: cover;
 }
 
-
-
-/*============== FOOTER ==============*/
-
-footer {
-    background-color: #272624;
-}
-
-footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 74%;
-    max-width: 1050px;
-    height: 50px;
-    font-size: 0.813rem;
-    color: #EBDA4F;
-}
-
-footer div a {
-    color: #EBDA4F;
-    text-decoration: none;
-    margin-right: 0.313rem;
-}
-
-footer div a:hover {
-    font-style: italic;
-}
-
-
 @media (max-width: 768px) {
 
     body {
