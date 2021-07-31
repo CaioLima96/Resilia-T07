@@ -44,19 +44,25 @@ header nav {
     align-items: center;
     height: 100%;
     padding: 0 5px;
+    background-color: transparent;
 }
 
 header nav a {
     color: #EBDA4F;
     margin: 0 5px;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.313rem;
+    transition: 0.6s all;
 }
 
 
 
 /*============== MAIN ==============*/
 
-#dog-collar {
+#pet-collar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,25 +73,25 @@ header nav a {
     margin: 3.125rem auto 0;
 }
 
-#dog-collar div:not(#name-tag) {
+#pet-collar div:not(#name-tag) {
     background-color: #2b88a5;
     width: 100px;
     height: 10px;
     flex-grow: 1;
 }
 
-#dog-collar div:nth-child(1) {
+#pet-collar div:nth-child(1) {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
 
-#dog-collar div:last-child {
+#pet-collar div:last-child {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px
 }
 
-#dog-collar #name-tag {
+#pet-collar #name-tag {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,14 +100,18 @@ header nav a {
     margin: 0 0.625rem;
 }
 
-#dog-collar #name-tag p {
+#pet-collar #name-tag p {
     position: absolute;
     font-size: 1.75rem;
     color: black;
 }
 
-#dog-collar #name-tag img {
+#pet-collar #name-tag img {
     width: 100%;
+}
+
+#pet-collar #name-tag .cat {
+    left: 72px;
 }
 
 #part-1 ul {
@@ -122,11 +132,6 @@ header nav a {
     margin: 1%;
 }
 
-#part-1 ul li:hover {
-    transition: 1s all;
-    transform: scale(1.1);
-}
-
 #part-1 ul li img {
     width: 100%;
     height: 100%;
@@ -134,6 +139,42 @@ header nav a {
     height: 100%;
     object-fit: cover;
 }
+
+
+
+/*============== HEADER ==============*/
+
+footer {
+    background-color: #272624;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 74%;
+    max-width: 1050px;
+    height: 50px;
+    font-size: 0.875rem;
+}
+
+footer div p, a {
+    color: #EBDA4F;
+}
+
+footer div a {
+    text-decoration: none;
+}
+
+footer div span {
+    font-size: 1.875rem;
+    margin: 0 0.313rem;
+    color: #EBDA4F;
+}
+
+
+
 
 @media (max-width: 768px) {
 
@@ -163,7 +204,7 @@ header nav a {
 
     /*============== MAIN ==============*/
     
-    #dog-collar {
+    #pet-collar {
         width: 90% !important;
     }
 
@@ -174,12 +215,38 @@ header nav a {
     #part-1 ul li {
         width: 48% !important;
     }
+
+
+    /*============== HEADER ==============*/
+
+    footer div {
+        flex-direction: column;
+    }
+
+    footer div p:last-child {
+        margin-top: 0.313rem;
+    }
+
+    footer div span {
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
+
+    header nav a:hover {
+        color: black;
+        background-color: #EBDA4F;
+        transition: 0.6s all;
+    }
 
     #part-1 ul li:hover {
         transition: 1s all;
         transform: scale(1.1);
     }
+
+    footer div a:hover {
+        font-style: italic;
+    }
+    
 }
