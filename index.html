@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="content-container">
+    <!-- <div id="content-container">
 
         <main>
             <div>
@@ -33,7 +33,50 @@
         <footer>
             <a href="https://github.com/CaioLima96/Resilia-T07" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </footer>
-    </div>
+    </div> -->
+
+    <header>
+        <h1>Resilia T07</h1>
+        <h4>Projetos feito durante a turma 7 da Resilia</h4>
+    </header>
+
+    <main>
+
+        <section id="exemplo-2">
+
+            <button type="button" class="collapsible">Módulo 1</button>
+            <div class="content">
+                <a href="modulo 1\aula-4\trajetoria\trajetoria.html" target="_blank"><p class="first-p">Trajetória</p></a>
+                <a href="modulo 1\aula-4\form-resilia\form-resilia.html" target="_blank"><p>Form de Inscrição</p></a>
+                <a href="modulo 1\aula-8\adote-aqui\index.html" target="_blank"><p>AdoteAqui</p></a>
+            </div>
+
+        </section >
+
+        
+    </main>
+
+    <footer>
+        <a href="https://github.com/CaioLima96/Resilia-T07" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/caiovieiralima/" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+        }
+    </script>
     
 </body>
 
