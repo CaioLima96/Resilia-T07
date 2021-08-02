@@ -8,15 +8,15 @@
 }
 
 body {
-    background-image: url(../img/damata-spot-4.png);
-    background-size: 50%;
-    background-position: 50% 50%;
+    background-image: url(../img/paw-4.png);
+    background-color: #AFD3AF;
 }
 
 /*============== HEADER ==============*/
 
 header {
     background-color: #272624;
+    margin-bottom: 1.563rem;
 }
 
 header div {
@@ -73,8 +73,12 @@ header nav a {
     margin: 3.125rem auto 0;
 }
 
+#pet-collar:first-child {
+    margin-top: 0 !important;
+}
+
 #pet-collar div:not(#name-tag) {
-    background-color: #2b88a5;
+    background-color: #a586864d;
     width: 100px;
     height: 10px;
     flex-grow: 1;
@@ -111,7 +115,7 @@ header nav a {
 }
 
 #pet-collar #name-tag .cat {
-    left: 72px;
+    left: 4.5rem;
 }
 
 #part-1 ul {
@@ -124,6 +128,9 @@ header nav a {
     padding: 1%;
     background-color: #a586864d;
     border-radius: 0.313rem;
+    box-shadow: 5px 6px 5px 0px rgb(0 0 0 / 52%);
+    -webkit-box-shadow: 5px 6px 5px 0px rgb(0 0 0 / 52%);
+    -moz-box-shadow: 5px 6px 5px 0px rgb(0 0 0 / 52%);
 }
 
 #part-1 ul li {
@@ -146,6 +153,7 @@ header nav a {
 
 footer {
     background-color: #272624;
+    margin-top: 3.125rem;
 }
 
 footer div {
@@ -174,7 +182,11 @@ footer div span {
 }
 
 
-
+@media (max-width: 399px) {
+    #pet-collar #name-tag .cat {
+        left: 3.5rem;
+    }
+}
 
 @media (max-width: 768px) {
 
