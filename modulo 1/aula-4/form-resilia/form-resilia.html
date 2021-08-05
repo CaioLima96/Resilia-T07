@@ -18,6 +18,10 @@
         <meta name="description" content="Já pensou em ser Web Dev e mudar de vida?">
         <meta name="keywords" content="resilia, programar, front-end">
         <meta name="author" content="Caio Vieira de Castro Lima">
+
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
         
     </head>
 
@@ -35,7 +39,14 @@
                 </div>
                 
                 <div id="input-field">
-                    <label for="email">E-mail (você usará o mesmo durante todo o processo seletivo)</label>
+                    <div>
+                        <label for="email">E-mail
+                        
+                        </label>
+                        <div class="tooltip"><i class="fas fa-question-circle"></i>
+                            <span class="tooltiptext">Você usará o mesmo durante todo o processo seletivo</span>
+                        </div>
+                    </div>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
 
@@ -69,8 +80,8 @@
                 </div>
 
                 <div id="input-field">
+                    <input type="checkbox" id="politica-privacidade" name="politica-privacidade" required>
                     <label for="politica-privacidade">Você concorda com a nossa <strong>Política de Privacidade?</strong></label>
-                    <input type="radio" id="politica-privacidade" name="politica-privacidade" required>
                 </div>
 
                 <div align = center>

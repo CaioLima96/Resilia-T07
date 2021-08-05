@@ -61,9 +61,52 @@ form {
     
 }
 
-/* #input-field input:not(input[type="radio" i]), select{
-    box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 75%);
-} */
+#input-field:nth-child(2) {
+    position: relative;
+}
+
+
+#input-field:nth-child(2) div:not(.tooltip) {
+    display: flex;
+    width: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    margin-left: 0.5rem;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    /* width: 120px; */
+    background-color: #000000a1;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 7%;
+    font-size: 0.875rem;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #000000a1 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
 #input-field:nth-child(6) {
     display: flex;
@@ -75,8 +118,11 @@ form {
     margin-bottom: 0 !important;
 }
 
-#input-field strong {
+#input-field:nth-child(6) input {
     margin-right: 0.313rem;
+}
+
+#input-field strong {
     color: rgba(0, 0, 255, 0.664);
 }
 
