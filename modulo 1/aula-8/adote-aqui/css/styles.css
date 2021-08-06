@@ -16,10 +16,14 @@ body {
 
 header {
     background-color: #272624;
-    margin-bottom: 1.563rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
-header div {
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,21 +34,21 @@ header div {
     font-size: 1.25rem;
 }
 
-header div a:not(nav a) {
-    display: flex;
+header nav a:not(ul a) {
     text-decoration: none;
     color: #EBDA4F;
     font-size: 1.688rem;
     font-weight: bold;
 }
 
-header nav {
+header ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
     padding: 0 5px;
     background-color: transparent;
+    list-style: none;
 }
 
 header nav a {
@@ -58,9 +62,50 @@ header nav a {
     transition: 0.6s all;
 }
 
+header nav ul li {
+    height: 100%;
+}
+
 
 
 /*============== MAIN ==============*/
+
+main #hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/bg/bg-cao-gato-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+    margin-bottom: 1.563rem; 
+}
+
+main #hero-img h1 {
+    font-size: 3.5rem;
+    max-width: 560px;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    color: #EBDA4F;
+}
+
+main #hero-img a {
+    color: black;
+    text-decoration: none;
+    background-color: wheat;
+    border-radius: 1.125rem;
+    padding: 0.313rem 0.5rem;
+    margin-top: 1.25rem;
+}
+
+main #hero-img p {
+    font-size: 1.5rem;
+}
 
 #pet-collar {
     display: flex;
@@ -167,7 +212,7 @@ footer div {
     font-size: 0.875rem;
 }
 
-footer div p, a {
+footer, footer a {
     color: #EBDA4F;
 }
 
@@ -196,16 +241,16 @@ footer div span {
 
     /*============== HEADER ==============*/
 
-    header div {
+    header nav {
         height: 129px;
         max-height: 129px;
     }
 
-    header div a p {
+    header a p {
         display: none;
     }
 
-    header div nav {
+    header nav ul {
         width: 100% !important;
         max-width: 100%;
         flex-direction: column;
