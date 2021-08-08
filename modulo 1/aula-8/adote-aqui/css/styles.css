@@ -17,10 +17,10 @@ body {
 header {
     background-color: #272624;
     width: 100%;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 3; */
 }
 
 header nav {
@@ -70,7 +70,7 @@ header nav ul li {
 
 /*============== MAIN ==============*/
 
-main #hero-img {
+/* main #hero-img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +105,7 @@ main #hero-img a {
 
 main #hero-img p {
     font-size: 1.5rem;
-}
+} */
 
 #pet-collar {
     display: flex;
