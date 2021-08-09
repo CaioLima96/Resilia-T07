@@ -33,7 +33,7 @@ main  {
     flex-direction: column;
     align-items: center;
     width: 85%;
-    max-width: 363px;
+    max-width: 500px;
 }
 
 main > div {
@@ -41,9 +41,13 @@ main > div {
 }
 
 #produtos {
+    background-image: url(../img/fruit-ninja-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 
     width: 100%;
     height: 406px;
@@ -54,7 +58,17 @@ main > div {
 }
 
 #produtos div {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid;
+    width: 40%;
+}
+
+#produtos div img {
+    width: 50%;
 }
 
 #produtos div button {
