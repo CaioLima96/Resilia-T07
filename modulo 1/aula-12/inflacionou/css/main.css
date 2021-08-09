@@ -36,7 +36,7 @@ main  {
     max-width: 363px;
 }
 
-main div:first-child {
+main > div {
     margin-bottom: 0.625rem;
 }
 
@@ -46,7 +46,7 @@ main div:first-child {
     flex-direction: column;
 
     width: 100%;
-    height: 322px;
+    height: 406px;
     
     background-color: #0000007d;
     -webkit-backdrop-filter: blur(2px);
