@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../img/fruta-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #root {
     height: 100vh;
     display: flex;
@@ -12,13 +18,18 @@
 }
 
 main  {
-    width: 500px;
-    border: 1px solid;
-    height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+
+    width: 85%;
+    max-width: 500px;
+    border: 1px solid;
+    height: 200px;
+    
+    background-color: #0000007d;
+    backdrop-filter: blur(2px);
 }
 
 main div {
