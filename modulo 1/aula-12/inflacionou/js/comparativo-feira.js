@@ -7,15 +7,18 @@ function tomate () {
         var valorDiferenca = valorAtual - valorAntigo;
 
         document.getElementById("tomate").innerHTML = `O tomate teve um aumento de: R$ ${valorDiferenca}`;
+        document.getElementById("tomate").style.marginTop = "10px";
 
     } else if (+valorAntigo > +valorAtual ) {
 
         var valorDiferenca = valorAntigo - valorAtual;
 
         document.getElementById("tomate").innerHTML = `O tomate teve uma redução de: R$ ${valorDiferenca}`;
+        document.getElementById("tomate").style.marginTop = "10px";
         
     } else{
         document.getElementById("tomate").innerHTML = "O tomate não teve alteração de preço.";
+        document.getElementById("tomate").style.marginTop = "10px";
     }
 }
 
