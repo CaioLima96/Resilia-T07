@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+@font-face {
+    font-family: gang-of-3;
+    src: url(./go3v2.ttf);
+}
+
 body {
     background-image: url(../img/fruta-bg.png);
     background-repeat: no-repeat;
@@ -14,6 +19,8 @@ body {
 }
 
 #root {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,9 +29,14 @@ body {
 
 header {
     width: 85%;
-    max-width: 310px;
+    max-width: 500px;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+header h1 {
+    font-family: gang-of-3, sans-serif;
+    letter-spacing: 0.188rem;
 }
 
 main  {
@@ -37,67 +49,81 @@ main  {
 
 main > div {
     margin-bottom: 0.625rem;
+    text-align: center;
 }
 
 #produtos {
-    background-image: url(../img/fruit-ninja-bg-1.jpg);
+    width: 100%;
+}
+
+#produtos ul {
+    background-image: url(../img/fruit-ninja-bg-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-
+    
     width: 100%;
     height: 406px;
+    list-style: none;
+    border-radius: 3px;
     
     background-color: #0000007d;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
 }
 
-#produtos div {
+#produtos ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
-    border: 1px solid;
-    width: 40%;
+    /* border: 1px solid; */
+    width: 30%;
+    margin: 2%;
+}
+
+#produtos ul li div {
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+}
+
+#produtos ul li div + p {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
 }
 
 #produtos div img {
-    width: 50%;
+    /* width: 100% */
+    width: 99px;
 }
 
-#produtos div button {
-    padding: 0.625rem;
-    width: 150px;
-    font-size: 1.25rem;
-    border: none;
+#produtos div p:not(ul li div p) {
+    margin-top: 0.625rem;
 }
 
-#produtos div p {
-    color: white;
-    font-size: 1.125rem;
-}
+
 
 @media (max-width: 768px) {
 
-    body {
+    /* body {
         background-size: 335% !important;
-    }
+    } */
 
-    header {
+    /* header {
         margin-top: 1.125rem;
-    }
+    } */
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
     #root {
         height: 100vh;
     }
-}
+} */
