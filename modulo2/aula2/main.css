@@ -1,0 +1,22 @@
+button {
+    margin-bottom: 1rem;
+}
+
+#caio {
+    background-color: red;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    width: 500px;
+    height: 500px;
+}
+
+#caio div {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.coluna {
+    flex-direction: column;
+}

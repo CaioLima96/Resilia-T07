@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*========= PART 1=========*/
+
+section {
+    width: 80%;
+    max-width: 400px;
+
+    /* border: 1px solid black; */
+    margin: 1.25rem auto;
+    padding: 0.063rem;
+
+    color: white;
+
+    background-image: url(../images/analise2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section > div {
+    margin: 1.25rem auto;
+    width: 90%;
+    background-color: rgba(22, 26, 29, .8);
+    padding: 0.063rem 1.25rem;
+}
+
+h1 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+form {
+    margin: 1.25rem auto;
+}
+
+fieldset {
+    border: none;
+}
+
+#input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#input-field:last-child {
+    margin-bottom: 0;
+}
+
+/* div:not(#input-field) {
+    display: flex;
+    justify-content: center;
+} */

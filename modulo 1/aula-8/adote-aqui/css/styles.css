@@ -118,6 +118,13 @@ main #hero-img p {
     margin: 3.125rem auto 0;
 }
 
+#sobre {
+    width: 67.5%;
+    max-width: 1140px;
+    margin: 1.25rem auto;
+    background-color: black;
+}
+
 #pet-collar:first-child {
     margin-top: 0 !important;
 }

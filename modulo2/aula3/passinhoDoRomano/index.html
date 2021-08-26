@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passinho do Romano</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <section id="part-1">
+
+        <div>
+
+            <h1>Passinho do Romano</h1>
+
+            <form action="">
+
+                <fieldset>
+
+                    <div id="input-field">
+                        <label for="inicialMenssagem">Digite sua menssagem aqui:</label>
+                        <input type="text" id="inicialMenssagem" name="inicialMenssagem" placeholder="Digite aqui">
+                    </div>
+
+                    <div id="input-field">
+                        <label for="codificacao">Escolha o tipo de codigicação:</label>
+                        <select name="codificacao" id="codificacao" required>
+                            <option selected disabled value="">Selecione um objetivo</option>
+                            <option onclick="cesarCifra()">Cifra de Cesar</option>
+                            <option>Base64</option>
+                        </select>
+                    </div>
+
+                    <div id="input-field">
+                        <label for="incremento">Digite seu incremento:</label>
+                        <input type="text" id="incremento" name="incremento" placeholder="Digite aqui">
+                    </div>
+
+                    <!-- <div>
+                        <div id="input-field" >
+                            <input type="radio" id="cesar" name="cesar"onclick="cesarCifra()" >
+                            <label for="cesar">Cifra de Cesar</label>
+                        </div>
+            
+                        <div id="input-field">
+                            <input type="radio" id="base64" name="base64">
+                            <label for="base64"></label>
+                        </div>
+                    </div> -->
+
+
+                    <div id="input-field">
+                        <input disabled type="text" placeholder="Menssagem codificada">
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
