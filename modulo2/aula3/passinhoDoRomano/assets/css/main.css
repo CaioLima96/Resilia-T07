@@ -56,7 +56,6 @@ fieldset {
     margin-bottom: 0;
 }
 
-/* div:not(#input-field) {
-    display: flex;
-    justify-content: center;
-} */
+.incrementoNone {
+    display: none !important;
+}

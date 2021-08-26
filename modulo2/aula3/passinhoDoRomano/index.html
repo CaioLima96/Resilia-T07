@@ -13,7 +13,7 @@
 
         <div>
 
-            <h1>Passinho do Romano</h1>
+            <h1 id="caio">Passinho do Romano</h1>
 
             <form action="">
 
@@ -24,36 +24,35 @@
                         <input type="text" id="inicialMenssagem" name="inicialMenssagem" placeholder="Digite aqui">
                     </div>
 
-                    <div id="input-field">
+                    <div id="input-field" class="CrifraSelec">
                         <label for="codificacao">Escolha o tipo de codigicação:</label>
-                        <select name="codificacao" id="codificacao" required>
+                        <select name="codificacao" id="codificacao">
                             <option selected disabled value="">Selecione um objetivo</option>
-                            <option onclick="cesarCifra()">Cifra de Cesar</option>
-                            <option>Base64</option>
+                            <option name="cesar" value="cifraDeCesar">Cifra de Cesar</option>
+                            <option name="cesar" value="cifraBase64">Base64</option>
                         </select>
                     </div>
 
-                    <div id="input-field">
+                    <div id="input-field" class="incremento">
                         <label for="incremento">Digite seu incremento:</label>
                         <input type="text" id="incremento" name="incremento" placeholder="Digite aqui">
                     </div>
 
-                    <!-- <div>
-                        <div id="input-field" >
-                            <input type="radio" id="cesar" name="cesar"onclick="cesarCifra()" >
-                            <label for="cesar">Cifra de Cesar</label>
-                        </div>
-            
-                        <div id="input-field">
-                            <input type="radio" id="base64" name="base64">
-                            <label for="base64"></label>
-                        </div>
-                    </div> -->
-
+                    <div id="input-field" >
+                        <input type="radio" id="codificar" name="codificar">
+                        <label for="codificar">Codificar</label>
+                    </div>
+        
+                    <div id="input-field">
+                        <input type="radio" id="decodificar" name="decodificar">
+                        <label for="decodificar">Decodificar</label>
+                    </div>
 
                     <div id="input-field">
                         <input disabled type="text" placeholder="Menssagem codificada">
                     </div>
+
+                    
 
                 </fieldset>
 
