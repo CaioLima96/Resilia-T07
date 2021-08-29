@@ -1,6 +1,6 @@
 var incrementar = document.querySelector('.incrementoField')
 document.querySelector('#caio').addEventListener('click', function() {
-    incrementar.classList.toggle('incrementoNone')
+    incrementar.classList.toggle('incrementoFlex')
     console.log("aaaa")
 })
 
@@ -38,6 +38,22 @@ function showDecodeBtn() {
 
 
 
+/*
+==========================================
+*/
+
+
+let areaTextInicio = document.getElementById('textoInicial')
+let areaTextFim = document.getElementById('textoFinal')
+
+areaTextInicio.addEventListener('keydown', () => {
+    let texto = document.getElementById('textoInicial').value
+    areaTextFim.innerText = texto
+    console.log('abc')
+})
+
+
+
 
 
 // var cipherSelect = document.getElementById('cipherSelect')
@@ -56,6 +72,10 @@ function showDecodeBtn() {
 */
 
 
-// let areaText = document.getElementById('#inicialMenssagem').value
+// areaText.addEventListener('keydown'), () => {
+//     var 
+// }
+
+
 // let chave = +document.getElementById('#incremento').value
 // let areaTextSplit = areaText.split('')
