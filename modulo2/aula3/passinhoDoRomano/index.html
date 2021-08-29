@@ -21,35 +21,41 @@
 
                     <div id="input-field">
                         <label for="inicialMenssagem">Digite sua menssagem aqui:</label>
-                        <input type="text" id="inicialMenssagem" name="inicialMenssagem" placeholder="Digite aqui">
+                        <!-- <input type="text" id="inicialMenssagem" name="inicialMenssagem" placeholder="Digite aqui"> -->
+                        <textarea id="inicialMenssagem" name="inicialMenssagem" ></textarea>
                     </div>
 
-                    <div id="input-field" class="CrifraSelec">
-                        <label for="codificacao">Escolha o tipo de codigicação:</label>
-                        <select name="codificacao" id="codificacao">
+                    <div id="input-field">
+                        <label for="cipherSelect">Escolha o tipo de codificação:</label>
+                        <select name="cipherSelect" id="cipherSelect">
                             <option selected disabled value="">Selecione um objetivo</option>
-                            <option name="cesar" value="cifraDeCesar">Cifra de Cesar</option>
-                            <option name="cesar" value="cifraBase64">Base64</option>
+                            <option value="cifraDeCesar">Cifra de Cesar</option>
+                            <option value="cifraBase64">Base64</option>
                         </select>
                     </div>
 
-                    <div id="input-field" class="incremento">
+                    <div id="chave" class="incrementoField">
                         <label for="incremento">Digite seu incremento:</label>
-                        <input type="text" id="incremento" name="incremento" placeholder="Digite aqui">
+                        <input type="number" id="incremento" name="incremento" placeholder="Digite aqui (apenas números)">
                     </div>
 
                     <div id="input-field" >
-                        <input type="radio" id="codificar" name="codificar">
+                        <input type="radio" id="codificar" name="cipher" onchange="showCodeBtn()">
                         <label for="codificar">Codificar</label>
                     </div>
         
                     <div id="input-field">
-                        <input type="radio" id="decodificar" name="decodificar">
+                        <input type="radio" id="decodificar" name="cipher" onchange="showDecodeBtn()">
                         <label for="decodificar">Decodificar</label>
                     </div>
 
-                    <div id="input-field">
-                        <input disabled type="text" placeholder="Menssagem codificada">
+                    <div id="btns">
+                        <button id="btnCode">Codificar Mensagem</button>
+                        <button id="btnDecode">Decodificar Mensagem</button>
+                    </div>
+
+                    <div id="codeDecodeMessage">
+                       <p>Mensagem decodificada</p>
                     </div>
 
                     
