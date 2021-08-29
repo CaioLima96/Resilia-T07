@@ -5,6 +5,11 @@ document.querySelector('#caio').addEventListener('click', function() {
 })
 
 
+/*
+==========================================
+*/
+
+
 var cipherSelect = document.getElementById('cipherSelect')
 cipherSelect.addEventListener('click', function() {
     if(cipherSelect.value == 'cifraDeCesar'){
@@ -54,43 +59,3 @@ function showDecodeBtn() {
 // let areaText = document.getElementById('#inicialMenssagem').value
 // let chave = +document.getElementById('#incremento').value
 // let areaTextSplit = areaText.split('')
-
-
-
-
-
-
-
-
-
-
-// let incrementando = document.querySelector('.incrementoField')
-// document.querySelector('#btnCesar').addEventListener('click', () => {
-//     incrementando.classList.toggle('incrementoNone')
-//     console.log("bbb")
-// })
-
-
-
-
-
-// var incrementar = document.querySelector('.incrementoField')
-// var cifraSelec = document.querySelector('#codificacao').cifraDeCesar
-
-// cifraSelec.addEventListener('click', function() {
-//     incrementar.classList.toggle('incrementoNone')
-//     console.log("aaaa")
-// })
-
-
-// var rad = document.getElementsByClassName('CrifraSelec').document.getElementsByName('cesar').value('')
-
-// function hideIncremento() {
-
-//     // if (incrementar.style.display === "none") {
-//     //     incrementar.style.display = "flex"
-//     // } else {
-//     //     incrementar.style.display = "none"
-//     // }
-
-// }

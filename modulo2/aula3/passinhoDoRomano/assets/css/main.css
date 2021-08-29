@@ -58,6 +58,16 @@ fieldset {
     margin-bottom: 0;
 }
 
+textarea {
+    max-width: 319px;
+    min-width: 100%; 
+    max-height: 220px;
+    
+    min-height: 60px;
+
+    /* resize: none; */
+}
+
 .incrementoField {
     display: none;
     flex-direction: column;
@@ -80,4 +90,3 @@ fieldset {
 /* #input-field:nth-child(3) {
     display: none;
 } */
-
