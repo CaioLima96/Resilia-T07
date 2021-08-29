@@ -71,6 +71,20 @@ fieldset {
     margin-bottom: 0;
 }
 
+#input-field:nth-last-child(5) {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+#input-field:nth-last-child(5) div:first-child {
+    margin-right: 10px;
+}
+
+label {
+    margin-bottom: 0.313rem;
+}
+
 textarea {
     /* max-width: 319px; */
     width: 100% !important;
@@ -105,3 +119,8 @@ textarea {
 /* #input-field:nth-child(3) {
     display: none;
 } */
+
+#firstLastP, #SecondLastP {
+    display: none;
+    font-size: 0.813rem;
+}
