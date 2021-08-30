@@ -23,10 +23,10 @@ body {
 /*========= PART 1=========*/
 
 section {
-    width: 80%;
+    width: 90%;
     max-width: 400px;
 
-    /* border: 1px solid black; */
+
     margin: 1.25rem auto;
     padding: 0.063rem;
 
@@ -71,13 +71,13 @@ fieldset {
     margin-bottom: 0;
 }
 
-#input-field:nth-last-child(5) {
+#input-field:nth-child(4) {
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center
 }
 
-#input-field:nth-last-child(5) div:first-child {
+#input-field:nth-child(4) div:first-child {
     margin-right: 10px;
 }
 
@@ -92,6 +92,8 @@ textarea {
 
     max-height: 220px;
     min-height: 66px;
+
+    padding: 0.063rem 0.313rem ;
 
     /* resize: none; */
 }
@@ -125,4 +127,30 @@ textarea {
     display: none;
     font-size: 0.813rem;
     margin-top: 0.313rem;
+}
+
+footer {
+    width: 90%;
+    max-width: 400px;
+
+    margin: 1.25rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 0.875rem;
+}
+
+footer p:first-child {
+    margin-right: 0.313rem; 
+}
+
+footer a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-style: italic;
 }

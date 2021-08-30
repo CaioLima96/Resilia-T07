@@ -1,24 +1,14 @@
-var incrementar = document.querySelector('.incrementoField')
-document.querySelector('#caio').addEventListener('click', function() {
-    incrementar.classList.toggle('incrementoFlex')
-    console.log("aaaa")
-})
-
-
-/*
-==========================================
-*/
-
 //ESCONDE-MOSTRA CAMPO INCREMENTO E BTNS CODE-DECODE
 
 var cipherSelect = document.getElementById('cipherSelect')
 cipherSelect.addEventListener('click', function() {
+
     if(cipherSelect.value == 'cifraDeCesar'){
         document.getElementById('chave').style.display = 'flex'
-        console.log('bbbb')
+
     } else {
         document.getElementById('chave').style.display = 'none'
-        console.log('cccc')
+
     }   
 })
 
@@ -49,10 +39,10 @@ function showDecodeBtn() {
 }
 
 
-
 /*
 ==========================================
 */
+
 
 //PEGAR AUTOMATICO DO TEXTAREA 1 PARA O TEXTAREA 2
 
@@ -81,13 +71,10 @@ function caesarCipher(str, num) {
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
     var newStr = '';
 
-    console.log(str)
-
     for(var i = 0; i < lowerCaseStr.length; i++) {
         var currentLetter = lowerCaseStr[i]
         if (currentLetter === ' ') {
             newStr += currentLetter;
-            console.log('jjjj')
             continue;
         }
 
@@ -96,52 +83,47 @@ function caesarCipher(str, num) {
 
         if (newIndex > 25) {
             newIndex = newIndex - 26 
-            console.log('pppp')
+
         } else if (newIndex < 0) {
             newIndex = newIndex + 26
-            console.log('vvvvv')
+
         }
         
         if(str[i] === str[i].toUpperCase()) {
             newStr += alphabet[newIndex].toUpperCase()
-            console.log('nnnn')
+            
         } else {
             newStr += alphabet[newIndex]
-            console.log('kkkk')
+            
         }
 
     }
     
-    console.log(newStr)
     return newStr
 }
 
-document.getElementById('btnCode').addEventListener('click', function() {
-    var inserirTexto = document.getElementById('textoFinal')
-    console.log('coca-cola')
 
+//CODIFICA
+document.getElementById('btnCode').addEventListener('click', function() {
+
+    var inserirTextoCesar = document.getElementById('textoFinal')
     var str = document.getElementById('textoInicial').value
     var num = document.getElementById('incremento').value
-
     
-    inserirTexto.innerText = caesarCipher(str, num)
+    inserirTextoCesar.innerText = caesarCipher(str, num)
 })
 
-document.getElementById('btnDecode').addEventListener('click', function() {
-    var inserirTexto = document.getElementById('textoFinal')
-    console.log('flexa')
-    
+//DECODICA
+document.getElementById('btnDecode').addEventListener('click', function() { 
+
+    var inserirTextoCesar2 = document.getElementById('textoFinal')
     var str = document.getElementById('textoInicial').value
     var num = document.getElementById('incremento').value
     num *= -1
 
     
-    inserirTexto.innerText = caesarCipher(str, num)
+    inserirTextoCesar2.innerText = caesarCipher(str, num)
 })
-
-
-
-//BASE 64
 
 
 /*
@@ -149,51 +131,18 @@ document.getElementById('btnDecode').addEventListener('click', function() {
 */
 
 
-// function caesarCipher() {
+//BASE 64
 
-//     var str = document.getElementById('textoInicial').value
-//     var num = document.getElementById('incremento').value
-//     num = num % 26
+// //CODIFICA
+// document.getElementById('btnCode').addEventListener('click', () => {
 
-//     var lowerCaseStr = str.toLowerCase();
-//     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-//     var newStr = '';
+//     inserirTextoBase64 = document.getElementById('textoFinal')
+//     inserirTextoBase64.innerText = btoa(document.getElementById('textoInicial').value)
+// })
 
-//     console.log(str)
+// //DECODIFICA
+// document.getElementById('btnDecode').addEventListener('click', () => {
 
-//     for(var i = 0; i < lowerCaseStr.length; i++) {
-//         var currentLetter = lowerCaseStr[i]
-//         if (currentLetter === ' ') {
-//             newStr += currentLetter;
-//             console.log('jjjj')
-//             continue;
-//         }
-
-//         var currentIndex = alphabet.indexOf(currentLetter)
-//         var newIndex = currentIndex + num
-
-//         if (newIndex > 25) {
-//             newIndex = newIndex - 26 
-//             console.log('pppp')
-//         } else if (newIndex < 0) {
-//             newIndex = newIndex + 26
-//             console.log('vvvvv')
-//         }
-        
-//         if(str[i] === str[i].toUpperCase()) {
-//             newStr += alphabet[newIndex].toUpperCase()
-//             console.log('nnnn')
-//         } else {
-//             newStr += alphabet[newIndex]
-//             console.log('kkkk')
-//         }
-
-//     }
-    
-//     console.log(newStr)
-//     return newStr
-// }
-
-
-
-// let chave = +document.getElementById('#incremento').value
+//     inserirTextoBase64dois = document.getElementById('textoFinal')
+//     inserirTextoBase64dois.innerText = atob(document.getElementById('textoInicial').value)
+// })
