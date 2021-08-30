@@ -5,36 +5,40 @@ cipherSelect.addEventListener('click', function() {
 
     if(cipherSelect.value == 'cifraDeCesar'){
         document.getElementById('chave').style.display = 'flex'
-        document.getElementById('teste1').style.display = 'flex'
+        document.getElementById('testeCaesar').style.display = 'flex'
+        document.getElementById('btnCaesar').style.display = 'flex'
 
         //BASE 64
-        document.getElementById('teste2').style.display = 'none'
+        document.getElementById('testeBase64').style.display = 'none'
+        document.getElementById('btnBase64').style.display = 'none'
 
     } else if (cipherSelect.value == 'Base64'){
 
-        document.getElementById('teste2').style.display = 'flex'
+        document.getElementById('testeBase64').style.display = 'flex'
+        document.getElementById('btnBase64').style.display = 'flex'
 
         //CAESAR
-        document.getElementById('teste1').style.display = 'none'
+        document.getElementById('testeCaesar').style.display = 'none'
         document.getElementById('chave').style.display = 'none'
-        document.getElementById('btns').style.display = 'none'
+        document.getElementById('btnCaesar').style.display = 'none'
 
     }   
 })
 
 
 //CAESAR CIPHER
-function showCodeBtn() {
+function showCodeBtnCaesar() {
 
-    document.getElementById('btnCode').style.display = "inline-block"
-    document.getElementById('btnDecode').style.display = "none"
+    document.getElementById('btnCodeCaesar').style.display = "inline-block"
+    document.getElementById('btnDecodeCaesar').style.display = "none"
     document.getElementById('firstLastP').style.display = "block"
     document.getElementById('SecondLastP').style.display = "none"
 }
 
-function showDecodeBtn() {
-    document.getElementById('btnCode').style.display = "none"
-    document.getElementById('btnDecode').style.display = "inline-block"
+function showDecodeBtnCaesar() {
+
+    document.getElementById('btnCodeCaesar').style.display = "none"
+    document.getElementById('btnDecodeCaesar').style.display = "inline-block"
     document.getElementById('SecondLastP').style.display = "block"
     document.getElementById('firstLastP').style.display = "none"
 }
@@ -42,17 +46,18 @@ function showDecodeBtn() {
 
 //BASE 64
 
-function showCodeBtn2() {
+function showCodeBtnBase64() {
 
-    document.getElementById('btnCode2').style.display = "inline-block"
-    document.getElementById('btnDecode2').style.display = "none"
+    document.getElementById('btnCodeBase64').style.display = "inline-block"
+    document.getElementById('btnDecodeBase64').style.display = "none"
     document.getElementById('firstLastP').style.display = "block"
     document.getElementById('SecondLastP').style.display = "none"
 }
 
-function showDecodeBtn2() {
-    document.getElementById('btnCode2').style.display = "none"
-    document.getElementById('btnDecode2').style.display = "inline-block"
+function showDecodeBtnBase64() {
+
+    document.getElementById('btnCodeBase64').style.display = "none"
+    document.getElementById('btnDecodeBase64').style.display = "inline-block"
     document.getElementById('SecondLastP').style.display = "block"
     document.getElementById('firstLastP').style.display = "none"
 }
@@ -122,7 +127,7 @@ function caesarCipher(str, num) {
 
 
 //CODIFICA
-document.getElementById('btnCode').addEventListener('click', function() {
+document.getElementById('btnCodeCaesar').addEventListener('click', function() {
 
     var inserirTextoCesar = document.getElementById('textoFinal')
     var str = document.getElementById('textoInicial').value
@@ -132,7 +137,7 @@ document.getElementById('btnCode').addEventListener('click', function() {
 })
 
 //DECODICA
-document.getElementById('btnDecode').addEventListener('click', function() { 
+document.getElementById('btnDecodeCaesar').addEventListener('click', function() { 
 
     var inserirTextoCesar2 = document.getElementById('textoFinal')
     var str = document.getElementById('textoInicial').value
@@ -152,14 +157,14 @@ document.getElementById('btnDecode').addEventListener('click', function() {
 //BASE 64
 
 //CODIFICA
-document.getElementById('btnCode2').addEventListener('click', () => {
+document.getElementById('btnCodeBase64').addEventListener('click', () => {
 
     inserirTextoBase64 = document.getElementById('textoFinal')
     inserirTextoBase64.innerText = btoa(document.getElementById('textoInicial').value)
 })
 
 //DECODIFICA
-document.getElementById('btnDecode2').addEventListener('click', () => {
+document.getElementById('btnDecodeBase64').addEventListener('click', () => {
 
     inserirTextoBase64dois = document.getElementById('textoFinal')
     inserirTextoBase64dois.innerText = atob(document.getElementById('textoInicial').value)

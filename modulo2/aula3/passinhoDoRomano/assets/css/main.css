@@ -115,12 +115,12 @@ textarea {
     margin-right: 0.625rem;
 }
 
-#btns, #btns2 {
-    text-align: center;
+#btnCaesar, #btnBase64 {
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
-#btnCode, #btnDecode, #btnCode2, #btnDecode2 {
+#btnCodeCaesar, #btnDecodeCaesar, #btnCodeBase64, #btnDecodeBase64 {
     display: none;
     cursor: pointer;
 }
@@ -158,6 +158,7 @@ footer p:first-child {
 footer a {
     cursor: pointer;
     text-decoration: none;
+    color: black;
 }
 
 footer a:hover {
