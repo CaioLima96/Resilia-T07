@@ -77,9 +77,9 @@ fieldset {
     justify-content: center
 }
 
-#input-field:nth-child(4) div:first-child {
+/* #input-field:nth-child(4) div:first-child {
     margin-right: 10px;
-}
+} */
 
 label {
     margin-bottom: 0.313rem;
@@ -105,16 +105,22 @@ textarea {
     margin-bottom: 1rem;
 }
 
-.incrementoFlex {
-    display: flex !important;
+.btnHide {
+    display: none;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-#btns {
+.btnHide  div:first-child{
+    margin-right: 0.625rem;
+}
+
+#btns, #btns2 {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-#btnCode, #btnDecode {
+#btnCode, #btnDecode, #btnCode2, #btnDecode2 {
     display: none;
     cursor: pointer;
 }
@@ -128,6 +134,9 @@ textarea {
     font-size: 0.813rem;
     margin-top: 0.313rem;
 }
+
+
+/*********************** FOOTER ***********************/
 
 footer {
     width: 90%;

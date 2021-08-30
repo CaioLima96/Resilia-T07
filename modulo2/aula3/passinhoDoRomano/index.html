@@ -38,7 +38,9 @@
                         <input type="number" id="incremento" name="incremento" placeholder="Digite aqui (apenas números)">
                     </div>
 
-                    <div id="input-field">
+
+                    <!--CAESAR CIPHER-->
+                    <div id="teste1" class="btnHide"> <!--id="input-field"--> 
                         <div>
                             <input type="radio" id="codificar" name="cipher" onchange="showCodeBtn()">
                             <label for="codificar">Codificar</label>
@@ -55,6 +57,25 @@
                         <a id="btnDecode">Decodificar Mensagem</a>
                     </div>
 
+
+                    <!--BASE 64-->
+                    <div id="teste2" class="btnHide"> <!--id="input-field"-->
+                        <div>
+                            <input type="radio" id="codificar" name="cipher" onchange="showCodeBtn2()">
+                            <label for="codificar">--Codificar</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="decodificar" name="cipher" onchange="showDecodeBtn2()">
+                            <label for="decodificar">--Decodificar</label>
+                        </div>
+                    </div>
+
+                    <div id="btns2">
+                        <a id="btnCode2">--Codificar Mensagem</a>
+                        <a id="btnDecode2">--Decodificar Mensagem</a>
+                    </div>
+                    
                     <div id="input-field" style="margin-bottom: 0;"> <!-- id="codeDecodeMessage"-->
                         <label for="textoFinal">Resultado:</label>
                         <textarea name="" id="textoFinal" rows="4" readonly></textarea>

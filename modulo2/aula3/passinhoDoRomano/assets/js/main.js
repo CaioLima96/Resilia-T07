@@ -5,39 +5,57 @@ cipherSelect.addEventListener('click', function() {
 
     if(cipherSelect.value == 'cifraDeCesar'){
         document.getElementById('chave').style.display = 'flex'
+        document.getElementById('teste1').style.display = 'flex'
 
-    } else {
+        //BASE 64
+        document.getElementById('teste2').style.display = 'none'
+
+    } else if (cipherSelect.value == 'Base64'){
+
+        document.getElementById('teste2').style.display = 'flex'
+
+        //CAESAR
+        document.getElementById('teste1').style.display = 'none'
         document.getElementById('chave').style.display = 'none'
+        document.getElementById('btns').style.display = 'none'
 
     }   
 })
 
-function showCodeBtn() {
-    let btn1 = document.getElementById('btnCode')
-    let btn2 = document.getElementById('btnDecode')
-    let ptextDecode = document.getElementById('firstLastP')
-    let ptextCodefy = document.getElementById('SecondLastP')
-    
-    btn1.style.display = "inline-block"
-    btn2.style.display = "none"
-    ptextDecode.style.display = "block"
-    ptextCodefy.style.display = "none"
-}
 
+//CAESAR CIPHER
+function showCodeBtn() {
+
+    document.getElementById('btnCode').style.display = "inline-block"
+    document.getElementById('btnDecode').style.display = "none"
+    document.getElementById('firstLastP').style.display = "block"
+    document.getElementById('SecondLastP').style.display = "none"
+}
 
 function showDecodeBtn() {
-    let btn1 = document.getElementById('btnCode')
-    let btn2 = document.getElementById('btnDecode')
-    let ptextCodefy = document.getElementById('SecondLastP')
-    let ptextDecode = document.getElementById('firstLastP')
-    
-
-    btn1.style.display = "none"
-    btn2.style.display = "inline-block"
-    ptextCodefy.style.display = "block"
-    ptextDecode.style.display = "none"
+    document.getElementById('btnCode').style.display = "none"
+    document.getElementById('btnDecode').style.display = "inline-block"
+    document.getElementById('SecondLastP').style.display = "block"
+    document.getElementById('firstLastP').style.display = "none"
 }
 
+
+//BASE 64
+
+function showCodeBtn2() {
+
+    document.getElementById('btnCode2').style.display = "inline-block"
+    document.getElementById('btnDecode2').style.display = "none"
+    document.getElementById('firstLastP').style.display = "block"
+    document.getElementById('SecondLastP').style.display = "none"
+}
+
+function showDecodeBtn2() {
+    document.getElementById('btnCode2').style.display = "none"
+    document.getElementById('btnDecode2').style.display = "inline-block"
+    document.getElementById('SecondLastP').style.display = "block"
+    document.getElementById('firstLastP').style.display = "none"
+}
 
 /*
 ==========================================
@@ -133,16 +151,52 @@ document.getElementById('btnDecode').addEventListener('click', function() {
 
 //BASE 64
 
-// //CODIFICA
-// document.getElementById('btnCode').addEventListener('click', () => {
+//CODIFICA
+document.getElementById('btnCode2').addEventListener('click', () => {
 
-//     inserirTextoBase64 = document.getElementById('textoFinal')
-//     inserirTextoBase64.innerText = btoa(document.getElementById('textoInicial').value)
-// })
+    inserirTextoBase64 = document.getElementById('textoFinal')
+    inserirTextoBase64.innerText = btoa(document.getElementById('textoInicial').value)
+})
 
-// //DECODIFICA
-// document.getElementById('btnDecode').addEventListener('click', () => {
+//DECODIFICA
+document.getElementById('btnDecode2').addEventListener('click', () => {
 
-//     inserirTextoBase64dois = document.getElementById('textoFinal')
-//     inserirTextoBase64dois.innerText = atob(document.getElementById('textoInicial').value)
-// })
+    inserirTextoBase64dois = document.getElementById('textoFinal')
+    inserirTextoBase64dois.innerText = atob(document.getElementById('textoInicial').value)
+})
+
+
+
+
+
+
+// function showCodeBtn() {
+
+//     if(cipherSelect.value == 'cifraDeCesar') {
+//         //CAESAR
+//         document.getElementById('btnCode').style.display = "inline-block"
+//         document.getElementById('btnDecode').style.display = "none"
+
+//         //BASE64
+//         document.getElementById('btnCode2').style.display = "none"
+//         document.getElementById('btnDecode2').style.display = "none"
+
+//         document.getElementById('firstLastP').style.display = "block"
+//         document.getElementById('SecondLastP').style.display = "none"
+
+
+//     }else if (cipherSelect.value == 'Base64') {
+//         //BASE64
+//         document.getElementById('btnCode2').style.display = "inline-block"
+//         document.getElementById('btnDecode2').style.display = "none"
+
+//         //CAESAR
+//         document.getElementById('btnCode').style.display = "none"
+//         document.getElementById('btnDecode').style.display = "none"
+
+//         document.getElementById('firstLastP').style.display = "block"
+//         document.getElementById('SecondLastP').style.display = "none"
+//     }
+
+    
+// }
