@@ -114,6 +114,7 @@ textarea {
 
 #btnCode, #btnDecode {
     display: none;
+    cursor: pointer;
 }
 
 /* #input-field:nth-child(3) {
@@ -123,4 +124,5 @@ textarea {
 #firstLastP, #SecondLastP {
     display: none;
     font-size: 0.813rem;
+    margin-top: 0.313rem;
 }
