@@ -114,6 +114,10 @@ textarea {
     margin-right: 0.625rem;
 }
 
+#testeCaesar label, #testeCaesar input, #testeBase64 label, #testeBase64 input {
+    cursor: pointer;
+}
+
 #btnCaesar, #btnBase64 {
     justify-content: center;
     margin-bottom: 1rem;
