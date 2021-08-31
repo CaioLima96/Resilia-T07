@@ -67,7 +67,7 @@ function showDecodeBtnBase64() {
 */
 
 
-//PEGAR AUTOMATICO DO TEXTAREA 1 PARA O TEXTAREA 2
+// PEGAR AUTOMATICO DO TEXTAREA 1 PARA O TEXTAREA 2
 
 // let areaTextInicio = document.getElementById('textoInicial')
 // let areaTextFim = document.getElementById('textoFinal')
@@ -143,7 +143,6 @@ document.getElementById('btnDecodeCaesar').addEventListener('click', function() 
     var str = document.getElementById('textoInicial').value
     var num = document.getElementById('incremento').value
     num *= -1
-
     
     inserirTextoCesar2.innerText = caesarCipher(str, num)
 })
@@ -188,23 +187,11 @@ function copyTextbtn() {
   
      /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.value);
-  
-    /* Alert the copied text */
-    // alert("Copied the text: " + copyText.value);
-    // document.querySelector('#copyBtn').addEventListener('focusin', () => {
-    //     document.querySelector('#copyP').innerText = "Copiado"
-    // })
-    
 }
 
 function showCopyBtn() {
     document.getElementById('copyBtn').style.display = "flex"
 }
-
-// var textoFinalCheck = document.querySelector('textoFinal')
-// if(textoFinalCheck.value != null) {
-//     document.getElementById('copyBtn').style.display = "flex"
-// }
 
 //Simula o efeito de :active e :hover (visto que simular o efeito :active "anula" o hover natural do css)
 function copiedUp() {
@@ -220,35 +207,3 @@ function copiedOut() {
     document.querySelector('#copyP').innerText = "COPIAR"
     document.querySelector('#copyBtn').style.backgroundColor = "#505050"
 }
-
-
-// function showCodeBtn() {
-
-//     if(cipherSelect.value == 'cifraDeCesar') {
-//         //CAESAR
-//         document.getElementById('btnCode').style.display = "inline-block"
-//         document.getElementById('btnDecode').style.display = "none"
-
-//         //BASE64
-//         document.getElementById('btnCode2').style.display = "none"
-//         document.getElementById('btnDecode2').style.display = "none"
-
-//         document.getElementById('firstLastP').style.display = "block"
-//         document.getElementById('SecondLastP').style.display = "none"
-
-
-//     }else if (cipherSelect.value == 'Base64') {
-//         //BASE64
-//         document.getElementById('btnCode2').style.display = "inline-block"
-//         document.getElementById('btnDecode2').style.display = "none"
-
-//         //CAESAR
-//         document.getElementById('btnCode').style.display = "none"
-//         document.getElementById('btnDecode').style.display = "none"
-
-//         document.getElementById('firstLastP').style.display = "block"
-//         document.getElementById('SecondLastP').style.display = "none"
-//     }
-
-    
-// }

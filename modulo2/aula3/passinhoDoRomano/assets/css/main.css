@@ -80,6 +80,10 @@ label {
     margin-bottom: 0.313rem;
 }
 
+#cipherSelect, #incremento {
+    padding: 2px 3px 3px 3px;
+}
+
 textarea {
     /* max-width: 319px; */
     width: 100% !important;
@@ -91,17 +95,6 @@ textarea {
     padding: 0.063rem 0.313rem ;
 
     /* resize: none; */
-}
-
-#textoFinal {
-    border: none;
-    overflow: auto;
-    outline: none;
-
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    background-color: rgb(204 201 201);
 }
 
 .incrementoField {
@@ -135,6 +128,16 @@ textarea {
     display: none;
 } */
 
+#textoFinal {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: rgb(204 201 201);
+}
 
 #copyBtn {
 
@@ -146,8 +149,6 @@ textarea {
 
     transition: all .3s;
     position: relative;
-    /*overflow: hidden;
-    z-index: 1; */
 }
 
 #copyP {
@@ -160,79 +161,6 @@ textarea {
 
 /* #copyBtn:active{
     background-color: rgb(20, 107, 20);
-} */
-
-/* #copyBtn #toolTipText {
-    visibility: hidden;
-    width: 70px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 62%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-  
-#copyBtn #toolTipText::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-  
-#copyBtn:active #toolTipText {
-    visibility: visible;
-    opacity: 1;
-} */
-
-/* 
-#copyBtn::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #505050;
-    border-radius: 0 0 0.125rem 0.125rem;
-    z-index: -2;
-}
-
-#copyBtn::before {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 0%;
-height: 100%;
-background-color: green;
-transition: all .3s;
-border-radius: 0 0 0.125rem 0.125rem;
-z-index: -1;
-}
-
-#copyBtn:active {
-    color: #fff;
-    
-}
-
-#copyBtn:active:before {
-    width: 100%;
-} */
-
-
-/* #copyBtn:hover, #copyBtn:active {
-    background-color: #817f7f;
 } */
 
 #firstLastP, #SecondLastP {
@@ -267,6 +195,7 @@ footer a {
     color: black;
 }
 
-footer a:hover {
+footer a:hover, footer a:active {
     font-style: italic;
+    text-decoration: underline;
 }
