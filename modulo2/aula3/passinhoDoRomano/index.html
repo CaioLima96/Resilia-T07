@@ -20,7 +20,7 @@
 
         <div>
 
-            <h1 id="caio" onclick="showCopyBtn()">Passinho do Romano</h1>
+            <h1>Passinho do Romano</h1>
 
             <form action="">
 
@@ -29,7 +29,7 @@
                     <div id="input-field">
                         <label for="cipherSelect">Escolha o tipo de codificação:</label>
                         <select name="cipherSelect" id="cipherSelect">
-                            <option selected disabled value="">Selecione um decodificador</option>
+                            <option selected disabled value="">Selecione um codificador</option>
                             <option value="cifraDeCesar">Cifra de Cesar</option>
                             <option value="Base64">Base64</option>
                         </select>
@@ -91,7 +91,7 @@
 
                         <a id ="copyBtn" class="btnHide" onclick="copyTextbtn()" onmouseup="copiedUp()" onmouseout="copiedOut()" onmouseover="copiedOver()">
                             <!--<p id="toolTipText">COPIADO</p>-->
-                            <p id="copyP">COPIAR</p> <i class="far fa-copy"></i>
+                            <p id="copyP" style="pointer-events: none;">COPIAR</p> <i class="far fa-copy" style="pointer-events: none;"></i>
                         </a>
 
                     </div>

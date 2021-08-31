@@ -1,7 +1,7 @@
 //ESCONDE-MOSTRA CAMPO INCREMENTO E BTNS CODE-DECODE
 
 var cipherSelect = document.getElementById('cipherSelect')
-cipherSelect.addEventListener('click', function() {
+cipherSelect.addEventListener('change', function() {
 
     if(cipherSelect.value == 'cifraDeCesar'){
         document.getElementById('chave').style.display = 'flex'
