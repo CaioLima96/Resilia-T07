@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Passinho do Romano</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passinho do Romano</title>
+    
+    <!-- MY CSS -->
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <section id="part-1">
 
         <div>
 
-            <h1 id="caio">Passinho do Romano</h1>
+            <h1 id="caio" onclick="showCopyBtn()">Passinho do Romano</h1>
 
             <form action="">
 
@@ -53,8 +60,8 @@
                     </div>
 
                     <div id="btnCaesar">
-                        <a id="btnCodeCaesar">Codificar Mensagem</a>
-                        <a id="btnDecodeCaesar">Decodificar Mensagem</a>
+                        <a id="btnCodeCaesar"  onclick="showCopyBtn()">Codificar Mensagem</a>
+                        <a id="btnDecodeCaesar"  onclick="showCopyBtn()">Decodificar Mensagem</a>
                     </div>
 
 
@@ -72,14 +79,21 @@
                     </div>
 
                     <div id="btnBase64">
-                        <a id="btnCodeBase64">Codificar Mensagem</a>
-                        <a id="btnDecodeBase64">Decodificar Mensagem</a>
+                        <a id="btnCodeBase64"  onclick="showCopyBtn()">Codificar Mensagem</a>
+                        <a id="btnDecodeBase64"  onclick="showCopyBtn()">Decodificar Mensagem</a>
                     </div>
                     
-                    <div id="input-field" style="margin-bottom: 0;"> <!-- id="codeDecodeMessage"-->
+                    <div id="input-field" style="margin-bottom: 0;">
+
                         <label for="textoFinal">Resultado:</label>
+                        
                         <textarea name="" id="textoFinal" rows="4" readonly></textarea>
-                        <a onclick="myFunction()">COPIAR</a>
+
+                        <a id ="copyBtn" class="btnHide" onclick="copyTextbtn()" onmouseup="copiedUp()" onmouseout="copiedOut()" onmouseover="copiedOver()">
+                            <!--<p id="toolTipText">COPIADO</p>-->
+                            <p id="copyP">COPIAR</p> <i class="far fa-copy"></i>
+                        </a>
+
                     </div>
 
                     <p id="firstLastP">* Para decodificar, basta copiar o texto codificado e colar no campo "Digite sua mensagem aqui"</p>

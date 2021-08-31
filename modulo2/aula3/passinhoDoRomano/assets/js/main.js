@@ -176,7 +176,9 @@ document.getElementById('btnDecodeBase64').addEventListener('click', () => {
 */
 
 
-function myFunction() {
+//COPY BUTTON
+
+function copyTextbtn() {
     /* Get the text field */
     var copyText = document.getElementById("textoFinal");
   
@@ -188,10 +190,36 @@ function myFunction() {
     navigator.clipboard.writeText(copyText.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    // alert("Copied the text: " + copyText.value);
+    // document.querySelector('#copyBtn').addEventListener('focusin', () => {
+    //     document.querySelector('#copyP').innerText = "Copiado"
+    // })
+    
 }
 
+function showCopyBtn() {
+    document.getElementById('copyBtn').style.display = "flex"
+}
 
+// var textoFinalCheck = document.querySelector('textoFinal')
+// if(textoFinalCheck.value != null) {
+//     document.getElementById('copyBtn').style.display = "flex"
+// }
+
+//Simula o efeito de :active e :hover (visto que simular o efeito :active "anula" o hover natural do css)
+function copiedUp() {
+    document.querySelector('#copyP').innerText = "COPIADO"
+    document.querySelector('#copyBtn').style.backgroundColor = "rgb(20, 107, 20)"
+}
+
+function copiedOver() {
+    document.querySelector('#copyBtn').style.backgroundColor = "#7a7a7a"
+}
+
+function copiedOut() {
+    document.querySelector('#copyP').innerText = "COPIAR"
+    document.querySelector('#copyBtn').style.backgroundColor = "#505050"
+}
 
 
 // function showCodeBtn() {
