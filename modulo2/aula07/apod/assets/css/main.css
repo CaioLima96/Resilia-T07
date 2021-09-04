@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: Gumball;
+    src: url(./Gumball.ttf);
 }
 
 
@@ -11,9 +19,50 @@
 
 
 header {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+
     max-width: 960px;
-    border: 1px solid;
     width: 90%;
     margin: 1rem auto;
+
+    border: 1px solid;
+}
+
+header div p {
+    font-family: Gumball, sans-serif !important;
+}
+
+header div:nth-child(2) {
+    width: 175px;
+}
+
+header div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 960px;
+    width: 90%;
+    height: 300px;
+    margin: 1rem auto;
+
+    border: 1px solid;
+}
+
+#main-content #calendar-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content #calendar-selector label {
+    text-align: center;
 }
