@@ -1,0 +1,19 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+==============================================
+*/
+
+
+header {
+    justify-content: space-around;
+    max-width: 960px;
+    border: 1px solid;
+    width: 90%;
+    margin: 1rem auto;
+}
