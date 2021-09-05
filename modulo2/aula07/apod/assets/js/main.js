@@ -30,8 +30,6 @@ const btnSubimit = document.querySelector('#btnSubmit').addEventListener('click'
         </div>
         
         `
-    
-
         console.log(nasaApi)
     }
 
