@@ -23,9 +23,9 @@ const btnSubimit = document.querySelector('#btnSubmit').addEventListener('click'
             </div>
             
             <div>
-                <h3> ${nasaApi.title} </h3>
+                <h3> ${nasaApi.title ? nasaApi.title : 'There is no title'} </h3>
                 <p style="margin: 1rem 0; line-height: 1.5;">${nasaApi.explanation}</p>
-                <p>Image credits & copyright: ${nasaApi.copyright ? nasaApi.copyright : 'Autor desconhecido'}</p>
+                <p>Image credits & copyright: ${nasaApi.copyright ? nasaApi.copyright : 'unknown author'}</p>
             </div>
         </div>
         
