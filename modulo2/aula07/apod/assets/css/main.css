@@ -17,6 +17,7 @@
 ==============================================
 */
 
+/*====== HEADER ======*/
 
 header {
     display: flex;
@@ -28,7 +29,7 @@ header {
     width: 90%;
     margin: 1rem auto;
 
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 header div p {
@@ -45,24 +46,92 @@ header div:nth-child(2) img {
     object-fit: contain;
 }
 
-#main-content {
+
+
+/*====== CONTENT ======*/
+
+#content {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     max-width: 960px;
     width: 90%;
-    height: 300px;
     margin: 1rem auto;
 
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
-#main-content #calendar-selector {
+#content #calendar-selector {
     display: flex;
-    flex-direction: column;
 }
 
-#main-content #calendar-selector label {
-    text-align: center;
+#content #calendar-selector label {
+    align-self: center;
+    font-size: 1.25rem;
+}
+
+#content #calendar-selector #data {
+    margin: 0 1rem;
+    padding: 0.313rem;
+    font-size: 1rem;
+}
+
+#content #calendar-selector button {
+    padding: 0 0.625rem;
+}
+
+#content #mainContent {
+    margin: 1rem 0;
+}
+
+#content #mainContent #nasa-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content #mainContent #nasa-content div:first-child {
+    width: 50%;
+}
+
+#content #mainContent #nasa-content div:last-child{
+    width: 45%;
+}
+
+#content #mainContent #nasa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 600px) {
+
+    #content #calendar-selector {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #content #calendar-selector #data {
+        margin: 1rem 0 !important;
+    }
+
+    #content #calendar-selector button {
+        width: 100% !important;
+        padding: 0.625rem !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #content #mainContent #nasa-content {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #content #mainContent #nasa-content div {
+        width: 100% !important;
+    } 
 }
