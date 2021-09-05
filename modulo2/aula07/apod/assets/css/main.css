@@ -22,16 +22,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: wheat;
+    
 
-    /* background-image: url(../img/StarBackgroundHQ.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    color: white;
-    backdrop-filter: blur(3px); */
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
 }
-
-
 
 /*
 ==============================================
@@ -40,23 +35,25 @@ body {
 /*====== HEADER ======*/
 
 header {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
 
     max-width: 960px;
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 3rem;
+    text-align: center;
 
     /* border: 1px solid; */
 }
 
 header div p {
     font-family: Gumball, sans-serif !important;
+    font-size: 3.125rem;
 }
 
-header div:nth-child(2) {
+/* header div:nth-child(2) {
     width: 175px;
 }
 
@@ -64,7 +61,7 @@ header div:nth-child(2) img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
+} */
 
 
 
@@ -78,13 +75,12 @@ header div:nth-child(2) img {
 
     max-width: 960px;
     width: 90%;
-    margin: 1rem auto;
-
-    /* border: 1px solid; */
+    margin: 1rem auto 3rem;
 }
 
 #content #calendar-selector {
     display: flex;
+    cursor: pointer;
 }
 
 #content #calendar-selector label {
@@ -100,6 +96,16 @@ header div:nth-child(2) img {
 
 #content #calendar-selector button {
     padding: 0 0.625rem;
+    background-color: wheat;
+    border: none;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#content #calendar-selector button:hover {
+    color: wheat;
+    background-color: rgb(192, 155, 86);
 }
 
 #content #mainContent {
@@ -113,6 +119,7 @@ header div:nth-child(2) img {
 
 #content #mainContent #nasa-content div:first-child {
     width: 50%;
+    border: 1px solid #f5deb314;
 }
 
 #content #mainContent #nasa-content div:last-child{
@@ -135,20 +142,18 @@ footer {
 
 footer p {
     margin: 10px 0;
+    font-size: 0.875rem;
 }
 
 footer p a {
     text-decoration: none;
-    color: black;
+    color: wheat;
 }
 
 footer p a:hover {
     text-decoration: underline;
     font-style: italic;
 }
-
-
-
 
 
 

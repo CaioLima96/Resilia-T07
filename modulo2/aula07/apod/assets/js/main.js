@@ -8,7 +8,7 @@ const btnSubimit = document.querySelector('#btnSubmit').addEventListener('click'
     if(nasaApi.code == 400) {
 
         mainContent.innerHTML = `
-        <h1>Selecine uma data igual ou anterior à data atual. Vemos o espaço, mas não o futuro para tirar foto do amanhã. :)</h1>
+        <h1>Selecine uma data entre 2000 e a atual. Vemos o espaço, mas não o futuro para tirar foto do amanhã. :)</h1>
         `
 
     } else {
@@ -24,7 +24,7 @@ const btnSubimit = document.querySelector('#btnSubmit').addEventListener('click'
             
             <div>
                 <h3> ${nasaApi.title} </h3>
-                <p style="margin: 1rem 0;">${nasaApi.explanation}</p>
+                <p style="margin: 1rem 0; line-height: 1.5;">${nasaApi.explanation}</p>
                 <p>Image credits & copyright: ${nasaApi.copyright ? nasaApi.copyright : 'Autor desconhecido'}</p>
             </div>
         </div>
