@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Pilha {
+            constructor(itenPilha) {
+                this.arr = [itenPilha]
+            }
+
+            empilha(itemNovo){
+                this.arr.push(itemNovo)
+            }
+            desempilha(){
+
+                try {
+                    if(this.arr == 0) {
+                        throw new Error("Pilha vazia")
+                    } else {
+                        this.arr.pop()
+                    }
+                
+                } catch (error) {
+                    console.log("ERROR: Não foi possivel retirar itens da pilha")
+                    console.log(error)
+                }
+            }
+
+            mostraPilha() {
+
+                try {
+                    if(this.arr == 0) {
+                        console.log('Pilha vazia')
+                        document.querySelector('body').innerHTML = `<h1>Pilha vazia</h1>`
+                    } else {
+                        console.log(this.arr)
+                        document.querySelector('body').innerHTML = `<h1>${this.arr}</h1>`
+                    }
+                } catch (error) {
+                    console.log("Não foi possível mostrar a pilha")
+                    console.log(error)
+                    
+                }
+                
+            }
+
+        }
+
+        let novaPilha = new Pilha('Arroz')
+
+
+    </script>
+</body>
+</html>

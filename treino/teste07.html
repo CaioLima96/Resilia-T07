@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let marcas = ['Apple', 'Samsung', 'Lg']
+        let modelos = ['Iphone', 'Galaxy', 'D337']
+        let cores = ['Preto', 'Branco', 'Vermelho']
+
+        function celularFactory(atributo1, atributo2, atributo3) {
+            return {
+                "marca": atributo1,
+                "modelo": atributo2,
+                "cores": atributo3
+            }
+        }
+
+        for (let i=0; i <marcas.length; i++) {
+            console.log(marcas[i], modelos[i], cores[i])
+        }
+
+    </script>
+</body>
+</html>

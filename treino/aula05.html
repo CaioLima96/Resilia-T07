@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+
+
+    <script>
+        saiyajin = {
+            "nome": "Goku",
+            "grupo": "Guerreiros Z",
+            "nivelSaiyajin": "ssgssj",
+            "instintoSuperior": "sim",
+            "golpe": "Kamehamehaaaaaaa",
+
+            "getNome" : function() {
+                return this.nome
+            },
+            "setNome": function(novoNome){
+                this.nome = novoNome
+            },
+
+            "getGolpe": function() {
+                return this.golpe
+            },
+            "setGolpe": function (novoGolpe){
+                this.golpe = novoGolpe
+            },
+
+            atacar() {
+                body.innerHTML += `<h1>${this.golpe}</h1>`
+            }
+        }
+
+        let JSONstr = JSON.stringify(saiyajin)
+        let JSONobj = JSON.parse(JSONstr)
+
+    </script>
+</body>
+</html>

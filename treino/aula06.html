@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+
+    <script>
+        const request = new XMLHttpRequest();
+        request.open("GET", "https://pokeapi.co/api/v2/pokemon/1/")
+        request.send()
+
+        request.onload = function() {
+            if(request.status >= 200 && request.status <= 299) {
+                let response = request.response
+                responseObj = JSON.parse(response)
+                console.log(responseObj)
+
+
+                Pokemon(responseObj)
+            }
+
+        }
+
+        // const request2 = new XMLHttpRequest();
+        // request2.open("GET", "https://pokeapi.co/api/v2/ability/")
+        // request2.send()
+
+        // request2.onload = function() {
+        //     if(request2.status >= 200 && request2.status <= 299) {
+        //        let response2 = request2.response2
+        //        let responseObj2 = JSON.parse(response2)
+        //        console.log(responseObj2)
+        //     }
+
+        // }
+
+        function Pokemon(object) {
+
+            
+            body.innerHTML += `
+                <h2>${object.name}</h2>
+                <h2>${object.abilities[1].ability.name}</h2>
+                <img src="${object.sprites.front_default}" alt="${object.name}">
+
+            `
+        }
+
+
+        //COMO FAZER MULTIPLAS CHAMADAS DE REQUEST
+
+    </script>
+</body>
+</html>

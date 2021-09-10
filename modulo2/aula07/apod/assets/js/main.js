@@ -4,6 +4,7 @@ const btnSubimit = document.querySelector('#btnSubmit').addEventListener('click'
     let dataValue = document.getElementById('data')
 
     let nasaApi = $.ajax({url: `https://api.nasa.gov/planetary/apod?api_key=WgSfzp8CJwi22ZaHEHUyD4hBuVuiAfeKb6tHk7dB&date=${dataValue.value}`, async: false}).responseJSON
+
     
     if(nasaApi.code == 400) {
 
