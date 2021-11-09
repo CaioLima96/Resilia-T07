@@ -1,0 +1,19 @@
+{
+  "name": "exe01",
+  "version": "0.0.1",
+  "description": "Projetinho pra estudar express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Caio Lima",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0"
+  }
+}
