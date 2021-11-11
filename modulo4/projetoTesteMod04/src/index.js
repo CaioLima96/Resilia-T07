@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
-const userControllers = require('./controllers/userControllers/userControllers')
+//const userControllers = require('./controllers/userControllers/userControllers')
+const UsersControllers = require('./controllers/userControllers/userControllers')
 const TasksControllers = require('./controllers/tasksControllers/tasksControllers')
 const {PORT, APP_NAME} = require('./util/appConfig')
 
 
+const users = new UsersControllers()
 const tasks = new TasksControllers()
 
 
@@ -20,10 +22,14 @@ app.get('/quadros', function (req, res) {
     res.send(quadro)
 })
 
-userControllers(app)
+
+app.get("/users", users.show)
+app.post("/users", users.save)
+//userControllers(app)
+
 
 app.get("/tasks", tasks.show)
-//app.get("/tasks", tasksControllers)
+app.post("/tasks", tasks.save)
 
 
 

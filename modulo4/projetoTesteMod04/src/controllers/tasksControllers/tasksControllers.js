@@ -12,6 +12,10 @@ class TasksControllers {
             user_id: 1,
         })
     }
+
+    save = (req, res) => {
+        res.send("Rota POST de tarefa ativada: tarefa adicionada ao banco de dados")
+    }
 }
 
 
