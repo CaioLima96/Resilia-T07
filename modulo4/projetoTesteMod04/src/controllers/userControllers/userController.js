@@ -7,22 +7,28 @@ class UserController {
     }
 
     show = async (req, res) => {
-        //fetch("this.dbConn.getUserById(req.params.id)")
 
         try{
             let user = await this.dbConn
             .getUserById(req.params.id)
+
             if(user.length == 0) {
+
                 console.log("Usuário não existe.")
-                res.send("Usuário não existe.")
+                res.status(400).send({error: "Usuário não existe."});
+
             } else {
-                res.send(user)
-            }
-            
-            
+
+                console.log(user)
+                res.status(200).send("Usuário retornado com sucesso").json()
+            }  
+
         } catch(error) {
+
             console.log('Erro da requisição: ' + error)
-            res.send(error)
+            res.status(500).json(error.message);
+
+            //return res.status(500).json(error.message);
         }
         
 
@@ -36,83 +42,98 @@ class UserController {
             // })
     }
 
-    // show = (req, res) => {
-    //     const id = req.params.id;
-    
-    //     this.dbConn
-    //       .getUserByID(id)
-    //       .then((user) => {
-    //         res.send(user);
-    //       })
-    //       .catch((error) => {
-    //         res.send(error);
-    //       });
-    // };
+    index = async (req, res) => {
+        try {
 
-    index = (req, res) => {
-        // console.log(this.dbConn, `\nRota GET retornando todos os valores`)
-        // res.send(this.dbConn)
-        
-        // this.dbConn.all("SELECT * FROM USUARIOS", (error, results) => {
-        //     if(error) {
-        //         res.send("Algo de errado num ta certo!")
-        //     } else {
-        //         res.send(results)
+            let userIndex = await this.dbConn.getAllUsers()
+
+            //console.log(userIndex)
+            res.status(200).send({data: userIndex, mensagem: "Usuários retornados com sucesso"})
+
+        } catch (error) {
+
+            console.log('Erro da requisição: ' + error)
+            res.status(500).json(error.message)
+        }
+
+        // this.dbConn.getAllUsers().then(
+        //     (result) => {
+        //         res.send(result)
         //     }
-        // })
+        // ).catch(
+        //     (error) => {
+        //         res.send(error)
+        //     }
+        // )
 
-        this.dbConn.getAllUsers().then(
-            (result) => {
-                res.send(result)
-            }
-        ).catch(
-            (error) => {
-                res.send(error)
-            }
-        )
+        // res.send(this.dbConn)
     }
 
-    save = (req, res) => {
+    save = async (req, res) => {
         const {nome, email, senha} = req.body
         const user = new UsersModel(nome, email, senha)
 
-        //Salva no banco
-        this.dbConn.run(
-            `INSERT INTO ${TABLE} VALUE (?, ?, ?, ?)`,
-            user.id, user.nome, user.email, user.senha,
-            (error) => {
-                if(error){
-                    res.send("Error: " + error)
-                } else {
-                    res.send("Tudo ok")
-                }
-            }
-        )
+        try {
 
-        console.log(user)
+            await this.dbConn.saveUser(user)
+
+            console.log(user)
+            res.status(201).send("Usuário salvo com sucesso").json()
+
+        } catch (error) {
+            console.log('Erro da requisição: ' + error)
+            res.status(500).json(error.message)
+        }
+        
+        
+        //console.log(user)
     }
 
-    remove = (req, res) => {
-        const id = parseInt(req.params.id)
-        this.dbConn = this.dbConn.filter((i) => {
-            
-            return i.id !== id;
-        })
+    remove = async (req, res) => {
+        try {
+
+            await this.dbConn.deleteEvent(req.params.id)
+
+            res.status(200).send("Usuário apagado com sucesso")
+
+        } catch (error) {
+            res.status(500).json(error.message)
+        }
+        
+        
         //console.log(i)
         res.send(`Menssagem: ${id} apagado com sucesso`)
     }
 
-    update = (req, res) => {
-        const id = parseInt(req.params.id)
-        const content = req.body
+    update = async (req, res) => {
+        const id = req.params.id;
+        const content = req.body;
+        //console.log(id, content)
 
-        for (let i =0; i < this.dbConn.length; i++) {
-            if(this.dbConn[i].id = id) {
-                this.dbConn[i] = content
+        try {
+
+            let teste = await this.dbConn.getUserById(id)[0]
+            console.log(teste)
+            if(content.ID == null ) {
+                content.ID = teste.ID
             }
-        }
+            if(content.NOME == null) {
+                content.NOME = teste.NOME
+            }
+            if(content.EMAIL == null) {
+                content.EMAIL = teste.EMAIL
+            }
+            if(content.SENHA == null) {
+                content.SENHA = teste.SENHA
+            }
 
-        res.send(`User: ${id} modificado com sucesso`)
+            await this.dbConn.updateUser(id, content)
+
+            res.send(`User: ${id} modificado com sucesso`)
+        } catch (error) {
+            res.status(500).json(error.message)
+        }
+        
     }
 
 }

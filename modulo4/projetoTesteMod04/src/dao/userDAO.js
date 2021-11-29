@@ -38,6 +38,55 @@ class UserDao {
             )
         })
     }
+
+    saveUser = (user) => {
+        return new Promise((resolve, reject) => {
+            this.dbConn.run(
+                `INSERT INTO ${TABLE} (NOME, EMAIL, SENHA) VALUES (?, ?, ?)`,
+                user.nome,
+                user.email,
+                user.senha,
+                (error) => {
+                if (error) {
+                    reject("Error: " + error);
+                } else {
+                    resolve(true);
+                }
+                }
+            );
+        });
+    };
+    
+    updateUser = (id, user) => {
+        return new Promise((resolve, reject) => {
+            this.dbConn.run(
+                `UPDATE ${TABLE} SET nome = ?, email = ?, senha = ? WHERE id = ?`,
+                user.nome,
+                user.email,
+                user.senha,
+                id,
+                (error) => {
+                    if (error) {
+                    reject(error);
+                    } else {
+                    resolve(true);
+                    }
+                }
+            );
+        });
+    };
+    
+    deleteUser = (id) => {
+        return new Promise((resolve, reject) => {
+            this.dbConn.run(`DELETE FROM ${TABLE} WHERE id = ?`, id, (error) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(true);
+                }
+            });
+        });
+    };
 }
 
 module.exports = new UserDao(bd)

@@ -1,7 +1,5 @@
 const TaskModel = require('../../models/tasksModel')
 const{tasksDB} = require('../../infra/bd')
-const bd = require('../../infra/sqlite-db');
-const {TASKS_TABLE:TABLE} = require('../../util/appConfig')
 
 
 class TasksController {
@@ -36,13 +34,8 @@ class TasksController {
     index = (req, res) => {
         // console.log(this.dbConn, `\nRota GET retornando todos os valores`)
         // res.send(this.dbConn)
-        this.dbConn.all("SELECT * FROM TAREFAS", (error, results) => {
-            if(error) {
-                res.send("Algo de errado num ta certo!")
-            } else {
-                res.send(results)
-            }
-        })
+        res.send(this.dbConn)
+       
     }
 
     save = (req, res) => {

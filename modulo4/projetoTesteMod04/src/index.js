@@ -34,6 +34,10 @@ app.get('/quadros', function (req, res) {
     res.send(quadro)
 })
 
+app.get("/", (req, res) => {
+    res.send("Welcome to ToDo APP API");
+});
+
 
 app.get("/users/:id", UserController.show)
 app.get("/users", UserController.index)
